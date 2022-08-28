@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?p28s4w');
+  src:  url('fonts/icomoon.eot?p28s4w#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?p28s4w') format('truetype'),
+    url('fonts/icomoon.woff?p28s4w') format('woff'),
+    url('fonts/icomoon.svg?p28s4w#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.card-front {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 45px;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.card[data-card-id="0"] .card-front:before {
+  content: "\e9fd";
+}
+.card[data-card-id="1"] .card-front:before {
+  content: "\e9e1";
+}
+.card[data-card-id="2"] .card-front:before {
+  content: "\e9e3";
+}
+.card[data-card-id="3"] .card-front:before {
+  content: "\e9e5";
+}
+.card[data-card-id="4"] .card-front:before {
+  content: "\e9e7";
+}
+.card[data-card-id="5"] .card-front:before {
+  content: "\e9e9";
+}
+.card[data-card-id="6"] .card-front:before {
+  content: "\e9eb";
+}
+.card[data-card-id="7"] .card-front:before {
+  content: "\e9ed";
+}
+.card[data-card-id="8"] .card-front:before {
+  content: "\e9ef";
+}
+.card[data-card-id="9"] .card-front:before {
+  content: "\e9f1";
+}
+.card[data-card-id="10"] .card-front:before {
+  content: "\e9f3";
+}
+.card[data-card-id="11"] .card-front:before {
+  content: "\e9f5";
+}
+.card[data-card-id="12"] .card-front:before {
+  content: "\e9f7";
+}
+.card[data-card-id="13"] .card-front:before {
+  content: "\e9f9";
+}
+.card[data-card-id="14"] .card-front:before {
+  content: "\e9fb";
+}
+
+@media screen and (max-width:768px) {
+  .card-front {
+    font-size: 35px;
+  }
+}

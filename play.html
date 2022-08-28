@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icons.css">
     <script type="text/javascript" src="app.js"></script>
     <title>Matching Cards Game</title>
 </head>
@@ -15,12 +16,24 @@
     the cards with same images with the less wrong answers</p>
 
 <p id="game-rules"></p>
-<div id="game-wrapper" class="cards-wrapper">
+<div id="game-wrapper" class="cards-wrapper"></div>
+<div id="choose-difficulty-popup">
+    <div class="popup-content">
+        <h2>Choose difficulty</h2>
+        <button class="easy" data-game-difficulty="easy">EASY</button>
+        <button class="medium" data-game-difficulty="medium">MEDIUM</button>
+        <button class="hard" data-game-difficulty="hard">HARD</button>
+    </div>
 </div>
 </body>
 
 <script>
-    new matchingCards({hideTime:3000, difficulty: 'easy'});
+    document.querySelectorAll('[data-game-difficulty]').forEach((button) => {
+        button.addEventListener('click', (e) => {
+            document.getElementById('choose-difficulty-popup').style.display = 'none';
+            new matchingCards({difficulty: e.target.dataset.gameDifficulty});
+        })
+    })
 </script>
 
 </html>
