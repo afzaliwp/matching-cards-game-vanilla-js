@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards-wrapper {
+    scrollbar-width: auto;
+    scrollbar-color: #d375b3 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+.cards-wrapper::-webkit-scrollbar {
+    width: 16px;
+}
+
+.cards-wrapper::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.cards-wrapper::-webkit-scrollbar-thumb {
+    background-color: #d375b3;
+    border-radius: 6px;
+    border: 3px solid #000403;
+}
+
+body {
+    background-color: #020403;
+    color: #fafafa;
+    font-family: 'DynaPuff', cursive;
+    margin: 20px 0;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: 2;
+    font-weight: 400;
+}
+
+h1.title {
+    text-align: center;
+}
+
+p.description {
+    text-align: center;
+    padding: 10px 100px;
+}
+
+.cards-wrapper {
+    background-color: #131017;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.card {
+    width: 125px;
+    height: 170px;
+    background: #192844;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-front, .card-back {
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card-front {
+    pointer-events: none;
+}
+
+.card-back {
+    background: rgb(25, 40, 68);
+    background: radial-gradient(circle at 100% 50%, transparent 20%, rgb(60, 195, 181) 21%, rgb(60, 195, 181) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 50%, transparent 20%, rgb(60, 195, 181) 21%, rgb(60, 195, 181) 34%, transparent 35%, transparent) 0 -50px;
+    background-size: 76px 100px;
+}
+
+.card[data-show="front"] .card-front, .card[data-show="back"] .card-back {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card[data-show="front"] .card-back, .card[data-show="back"] .card-front {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 40vw;
+        height: 60vw;
+    }
+
+    p.description {
+        padding: 10px 0;
+    }
+}
