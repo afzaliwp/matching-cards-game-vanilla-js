@@ -49,7 +49,7 @@ class matchingCards {
             card.dataset.show = 'front';
             card.dataset.cardId = `${i}`;
 
-            const cardFront = this.generateCardChild('front', `content: ${i}`);
+            const cardFront = this.generateCardChild('front');
             const cardBack = this.generateCardChild('back');
 
             card.appendChild(cardBack);
@@ -61,13 +61,9 @@ class matchingCards {
         return cards;
     }
 
-    generateCardChild(side, content = '') {
+    generateCardChild(side) {
         const cardChild = document.createElement('div');
         cardChild.classList.add(`card-${side}`);
-
-        if (side === 'front') {
-            cardChild.innerHTML = content;
-        }
 
         return cardChild;
     }
